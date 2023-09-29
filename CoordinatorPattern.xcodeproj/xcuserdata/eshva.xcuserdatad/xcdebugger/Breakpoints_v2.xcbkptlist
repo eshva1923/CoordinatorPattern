@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "30268EEC-8A39-4A39-82F9-321BF7631E77"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C752430F-48E0-4A9A-812F-63B21E0EFEB9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoordinatorPattern/Paths/BaseClasses/SpecPath.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "automatic(callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C752430F-48E0-4A9A-812F-63B21E0EFEB9 - 5ee1a73e85687bdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoordinatorPattern.SpecPath.automatic(callback: Swift.Optional&lt;(CoordinatorPattern.PathResult) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "CoordinatorPattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eshva/Developer/CoordinatorPattern/CoordinatorPattern/Paths/BaseClasses/SpecPath.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "C752430F-48E0-4A9A-812F-63B21E0EFEB9 - 5ee1a73e85687bdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoordinatorPattern.SpecPath.automatic(callback: Swift.Optional&lt;(CoordinatorPattern.PathResult) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "CoordinatorPattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eshva/Developer/CoordinatorPattern/CoordinatorPattern/Paths/BaseClasses/SpecPath.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E42A8B17-423A-42FB-8A3B-0E3455F166B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoordinatorPattern/Scenes/MainScreen/MainScreenVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadURL(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "803EE1C4-FBC1-4188-B471-2EA63A8F9524"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoordinatorPattern/Coordinators/MasterCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "eventReceived(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "803EE1C4-FBC1-4188-B471-2EA63A8F9524 - 5ea8bbc5d1062458"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CoordinatorPattern.MasterCoordinator.eventReceived(CoordinatorPattern.SpecEvent) -&gt; ()"
+                  moduleName = "CoordinatorPattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eshva/Developer/CoordinatorPattern/CoordinatorPattern/Coordinators/MasterCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "803EE1C4-FBC1-4188-B471-2EA63A8F9524 - a763f7c43c1d0cbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (CoordinatorPattern.SpecCoordinatedProtocol) -&gt; Swift.Bool in CoordinatorPattern.MasterCoordinator.eventReceived(CoordinatorPattern.SpecEvent) -&gt; ()"
+                  moduleName = "CoordinatorPattern"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eshva/Developer/CoordinatorPattern/CoordinatorPattern/Coordinators/MasterCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
