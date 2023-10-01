@@ -20,12 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let coordinator = MasterCoordinator()
-        let navVC = UINavigationController()
-        coordinator.navigationController = navVC
-        window?.rootViewController = navVC
+        window?.rootViewController = MasterCoordinator.getNavigationController()
         window?.makeKeyAndVisible()
-        coordinator.start()
+        MasterCoordinator.shared.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

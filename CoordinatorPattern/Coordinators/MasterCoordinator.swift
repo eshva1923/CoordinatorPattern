@@ -8,55 +8,36 @@
 import Foundation
 import UIKit
 
-class MasterCoordinator: SpecCoordinatorProtocol {
-    var paths: [SpecPath] = []
+class MasterCoordinator: SpecCoordinator {
+    private static var navigationController = UINavigationController()
+    static let shared = MasterCoordinator(paths: [], name: "MASTER", coordinated: [], master: nil, slaves: [])
+    static func getNavigationController() -> UINavigationController { navigationController }
     
-    var coordinated: [SpecCoordinatedProtocol] = []
-    
-    var name = "MASTER"
-    var navigationController: UINavigationController?
-    
-    
-    private var mainVCSpawned = false
-    
-    func eventReceived(_ event: SpecEvent) {
-        switch event {
-        case .coordinated_spawned:
-            guard mainVCSpawned == false else { return }
-            mainVCSpawned = true
-            let testpath = paths.first { $0.name == "TEST" }
-            guard let tp = testpath else { return }
-            startPath(tp)
-        case .webview_loadTheWebsite:
-            let webviewController = coordinated.first { $0.name == "MainScreenVC" }
-            guard let vc = webviewController as? MainScreenVC else {return}
-            vc.loadURL("https://web.eshva.net")
-        default:
-            print("eh")
+    private override init(paths: [SpecPath], name: String, coordinated: [SpecCoordinatedProtocol], master: SpecCoordinator? = nil, slaves: [SpecCoordinator]) {
+        super.init(paths: [],
+                   name: "MASTER",
+                   coordinated: [],
+                   master: nil,
+                   slaves: [])
+        configure()
+    }
+    private func configure() {
+        addSlave(WebViewCoordinator())
+    }
+    override func start() {
+        print("master started")
+        for slave in self.slaves {
+            slave.start()
         }
     }
     
-    func startPath(_ path: SpecPath) {
-        path.automatic { result in
-            dump(result)
+    override func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
+        if event == SpecEvents.coordinator.add_VC {
+            guard let vc = payload as? UIViewController else {return}
+            var newNavControllerStack = MasterCoordinator.navigationController.viewControllers
+            newNavControllerStack.append(vc)
+            MasterCoordinator.navigationController.setViewControllers(newNavControllerStack, animated: false)
         }
     }
-    
-    func start() {
-        guard let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainScreenVC") as? MainScreenVC else {
-            fatalError("OH NO")
-        }
-        let vc: MainScreenVC & SpecCoordinatedProtocol = mainVC
-        vc.coordinator = self
-        coordinated.append(vc)
-        navigationController?.setViewControllers([vc], animated: false)
-        
-        setupPaths()
-    }
-    
-    func setupPaths() {
-        paths.append(TestPath(coordinator: self))
-    }
-    
-    
 }
+

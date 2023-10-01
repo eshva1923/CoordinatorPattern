@@ -12,7 +12,7 @@
 		D02651B92AC751A70017CFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02651B82AC751A70017CFC2 /* Assets.xcassets */; };
 		D02651BC2AC751A70017CFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02651BA2AC751A70017CFC2 /* LaunchScreen.storyboard */; };
 		D02651C52AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */; };
-		D02651C72AC754780017CFC2 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651C62AC754780017CFC2 /* MasterCoordinator.swift */; };
+		D02651C72AC754780017CFC2 /* OLDMasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */; };
 		D02651CA2AC7567F0017CFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02651C92AC7567F0017CFC2 /* Main.storyboard */; };
 		D02651CE2AC757340017CFC2 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651CD2AC757340017CFC2 /* MainScreenVC.swift */; };
 		D02651D42AC75EFA0017CFC2 /* SpecPathProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651D32AC75EFA0017CFC2 /* SpecPathProtocol.swift */; };
@@ -22,6 +22,12 @@
 		D02651DD2AC761180017CFC2 /* SpecStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651DC2AC761180017CFC2 /* SpecStep.swift */; };
 		D02651DF2AC761700017CFC2 /* ActionableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651DE2AC761700017CFC2 /* ActionableProtocol.swift */; };
 		D02651E22AC762D20017CFC2 /* TestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651E12AC762D20017CFC2 /* TestPath.swift */; };
+		D02FEF522AC7761200034697 /* SpecCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF512AC7761200034697 /* SpecCoordinator.swift */; };
+		D02FEF542AC7765900034697 /* SpecCoordinatedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */; };
+		D02FEF582AC7783600034697 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF572AC7783600034697 /* MasterCoordinator.swift */; };
+		D02FEF5B2AC77A5200034697 /* SpecEventInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */; };
+		D02FEF5D2AC77BD900034697 /* SpecEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5C2AC77BD900034697 /* SpecEvent.swift */; };
+		D02FEF5F2AC783AE00034697 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +38,7 @@
 		D02651BB2AC751A70017CFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02651BD2AC751A70017CFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinatorProtocol.swift; sourceTree = "<group>"; };
-		D02651C62AC754780017CFC2 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
+		D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDMasterCoordinator.swift; sourceTree = "<group>"; };
 		D02651C92AC7567F0017CFC2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D02651CD2AC757340017CFC2 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 		D02651D32AC75EFA0017CFC2 /* SpecPathProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecPathProtocol.swift; sourceTree = "<group>"; };
@@ -42,6 +48,12 @@
 		D02651DC2AC761180017CFC2 /* SpecStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecStep.swift; sourceTree = "<group>"; };
 		D02651DE2AC761700017CFC2 /* ActionableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionableProtocol.swift; sourceTree = "<group>"; };
 		D02651E12AC762D20017CFC2 /* TestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPath.swift; sourceTree = "<group>"; };
+		D02FEF512AC7761200034697 /* SpecCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinator.swift; sourceTree = "<group>"; };
+		D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinatedProtocol.swift; sourceTree = "<group>"; };
+		D02FEF572AC7783600034697 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
+		D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecEventInteractorProtocol.swift; sourceTree = "<group>"; };
+		D02FEF5C2AC77BD900034697 /* SpecEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecEvent.swift; sourceTree = "<group>"; };
+		D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,7 @@
 				D02651CB2AC757150017CFC2 /* Scenes */,
 				D02651C82AC7566A0017CFC2 /* UI */,
 				D02651CF2AC75E620017CFC2 /* Paths */,
+				D02FEF592AC77A3F00034697 /* Events */,
 				D02651C32AC753A10017CFC2 /* Coordinators */,
 				D02651AF2AC751A60017CFC2 /* AppDelegate.swift */,
 				D02651B12AC751A60017CFC2 /* SceneDelegate.swift */,
@@ -91,8 +104,11 @@
 		D02651C32AC753A10017CFC2 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				D02FEF502AC7760100034697 /* BaseClasses */,
 				D02651D02AC75E760017CFC2 /* Protocols */,
-				D02651C62AC754780017CFC2 /* MasterCoordinator.swift */,
+				D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */,
+				D02FEF572AC7783600034697 /* MasterCoordinator.swift */,
+				D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */,
+				D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -164,6 +181,23 @@
 				D02651DA2AC760DF0017CFC2 /* SpecPath.swift */,
 			);
 			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		D02FEF502AC7760100034697 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D02FEF512AC7761200034697 /* SpecCoordinator.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		D02FEF592AC77A3F00034697 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */,
+				D02FEF5C2AC77BD900034697 /* SpecEvent.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,13 +273,19 @@
 			files = (
 				D02651CE2AC757340017CFC2 /* MainScreenVC.swift in Sources */,
 				D02651D42AC75EFA0017CFC2 /* SpecPathProtocol.swift in Sources */,
+				D02FEF582AC7783600034697 /* MasterCoordinator.swift in Sources */,
 				D02651D72AC75F4E0017CFC2 /* Collection+Extensions.swift in Sources */,
+				D02FEF5B2AC77A5200034697 /* SpecEventInteractorProtocol.swift in Sources */,
 				D02651D92AC75F700017CFC2 /* BidirectionalCollection+Extensions.swift in Sources */,
 				D02651DB2AC760DF0017CFC2 /* SpecPath.swift in Sources */,
+				D02FEF522AC7761200034697 /* SpecCoordinator.swift in Sources */,
 				D02651B02AC751A60017CFC2 /* AppDelegate.swift in Sources */,
 				D02651E22AC762D20017CFC2 /* TestPath.swift in Sources */,
 				D02651C52AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift in Sources */,
-				D02651C72AC754780017CFC2 /* MasterCoordinator.swift in Sources */,
+				D02FEF5D2AC77BD900034697 /* SpecEvent.swift in Sources */,
+				D02FEF542AC7765900034697 /* SpecCoordinatedProtocol.swift in Sources */,
+				D02651C72AC754780017CFC2 /* OLDMasterCoordinator.swift in Sources */,
+				D02FEF5F2AC783AE00034697 /* WebViewCoordinator.swift in Sources */,
 				D02651DD2AC761180017CFC2 /* SpecStep.swift in Sources */,
 				D02651B22AC751A60017CFC2 /* SceneDelegate.swift in Sources */,
 				D02651DF2AC761700017CFC2 /* ActionableProtocol.swift in Sources */,

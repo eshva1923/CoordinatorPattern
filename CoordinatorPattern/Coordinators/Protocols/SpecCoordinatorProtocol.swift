@@ -6,28 +6,21 @@
 //
 
 import Foundation
-import UIKit
 
-enum SpecEvent {
-    case buttonTapped
-    case navigationError_malformedURL
-    case coordinated_spawned
-    case webview_loadTheWebsite
-}
 protocol SpecCoordinatorProtocol {
     var paths: [SpecPath] {get set}
     var name: String {get set}
-    var navigationController: UINavigationController? {get set}
+    //var navigationController: UINavigationController? {get set}
     var coordinated: [SpecCoordinatedProtocol] {get set}
+    var master: SpecCoordinator? {get set}
+    var slaves: [SpecCoordinator] {get}
     
-    func eventReceived(_ event: SpecEvent)
+    //func eventReceived(_ event: SpecEvent)
+    //func eventSend(_ event: SpecEvent, to: SpecCoordinatedProtocol)
+    //func eventBroadcast(_ event: SpecEvent)
     func start()
+    func setMaster(_ newMaster: SpecCoordinator)
+    //
     func startPath(_ path: SpecPath)
-    func setupPaths()
-}
-
-protocol SpecCoordinatedProtocol {
-    var coordinator: SpecCoordinatorProtocol? {get set}
-    var name: String {get set}
-    func notifyCoordinator(_ event: SpecEvent)
+    //func setupPaths()
 }

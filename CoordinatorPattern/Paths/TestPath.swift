@@ -15,7 +15,7 @@ class TestPath: SpecPath {
             SpecStep(name: "step one", executableAction: { print("executing step one"); return .ActionOK }),
             SpecStep(name: "step two", executableAction: {
                 print("loading a website");
-                coordinator?.eventReceived(.webview_loadTheWebsite)
+                //coordinator?.eventReceived(.webview_loadTheWebsite)
                 return .ActionOK }),
             SpecStep(name: "step three", executableAction: { print("executing step three"); return .ActionOK })
         ], coordinator: coordinator)
