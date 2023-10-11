@@ -14,7 +14,7 @@
 		D02651C52AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */; };
 		D02651C72AC754780017CFC2 /* OLDMasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */; };
 		D02651CA2AC7567F0017CFC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02651C92AC7567F0017CFC2 /* Main.storyboard */; };
-		D02651CE2AC757340017CFC2 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651CD2AC757340017CFC2 /* MainScreenVC.swift */; };
+		D02651CE2AC757340017CFC2 /* OLDMainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651CD2AC757340017CFC2 /* OLDMainScreenVC.swift */; };
 		D02651D42AC75EFA0017CFC2 /* SpecPathProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651D32AC75EFA0017CFC2 /* SpecPathProtocol.swift */; };
 		D02651D72AC75F4E0017CFC2 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651D62AC75F4E0017CFC2 /* Collection+Extensions.swift */; };
 		D02651D92AC75F700017CFC2 /* BidirectionalCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02651D82AC75F700017CFC2 /* BidirectionalCollection+Extensions.swift */; };
@@ -26,8 +26,11 @@
 		D02FEF542AC7765900034697 /* SpecCoordinatedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */; };
 		D02FEF582AC7783600034697 /* MasterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF572AC7783600034697 /* MasterCoordinator.swift */; };
 		D02FEF5B2AC77A5200034697 /* SpecEventInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */; };
-		D02FEF5D2AC77BD900034697 /* SpecEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5C2AC77BD900034697 /* SpecEvent.swift */; };
-		D02FEF5F2AC783AE00034697 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */; };
+		D02FEF5D2AC77BD900034697 /* SpecEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5C2AC77BD900034697 /* SpecEvents.swift */; };
+		D02FEF5F2AC783AE00034697 /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF5E2AC783AE00034697 /* MainScreenCoordinator.swift */; };
+		D02FEF612AC97BC700034697 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF602AC97BC700034697 /* Storyboarded.swift */; };
+		D02FEF632AC97DC700034697 /* SpecCoordinatedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF622AC97DC600034697 /* SpecCoordinatedVC.swift */; };
+		D02FEF652AC9830E00034697 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02FEF642AC9830E00034697 /* MainScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +43,7 @@
 		D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDMasterCoordinator.swift; sourceTree = "<group>"; };
 		D02651C92AC7567F0017CFC2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D02651CD2AC757340017CFC2 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		D02651CD2AC757340017CFC2 /* OLDMainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDMainScreenVC.swift; sourceTree = "<group>"; };
 		D02651D32AC75EFA0017CFC2 /* SpecPathProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecPathProtocol.swift; sourceTree = "<group>"; };
 		D02651D62AC75F4E0017CFC2 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		D02651D82AC75F700017CFC2 /* BidirectionalCollection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BidirectionalCollection+Extensions.swift"; sourceTree = "<group>"; };
@@ -52,8 +55,11 @@
 		D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinatedProtocol.swift; sourceTree = "<group>"; };
 		D02FEF572AC7783600034697 /* MasterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCoordinator.swift; sourceTree = "<group>"; };
 		D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecEventInteractorProtocol.swift; sourceTree = "<group>"; };
-		D02FEF5C2AC77BD900034697 /* SpecEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecEvent.swift; sourceTree = "<group>"; };
-		D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
+		D02FEF5C2AC77BD900034697 /* SpecEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecEvents.swift; sourceTree = "<group>"; };
+		D02FEF5E2AC783AE00034697 /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		D02FEF602AC97BC700034697 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		D02FEF622AC97DC600034697 /* SpecCoordinatedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecCoordinatedVC.swift; sourceTree = "<group>"; };
+		D02FEF642AC9830E00034697 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,7 @@
 				D02651D02AC75E760017CFC2 /* Protocols */,
 				D02651C62AC754780017CFC2 /* OLDMasterCoordinator.swift */,
 				D02FEF572AC7783600034697 /* MasterCoordinator.swift */,
-				D02FEF5E2AC783AE00034697 /* WebViewCoordinator.swift */,
+				D02FEF5E2AC783AE00034697 /* MainScreenCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -132,7 +138,8 @@
 		D02651CC2AC7571C0017CFC2 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D02651CD2AC757340017CFC2 /* MainScreenVC.swift */,
+				D02651CD2AC757340017CFC2 /* OLDMainScreenVC.swift */,
+				D02FEF642AC9830E00034697 /* MainScreenVC.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -152,6 +159,7 @@
 			children = (
 				D02651C42AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift */,
 				D02FEF532AC7765900034697 /* SpecCoordinatedProtocol.swift */,
+				D02FEF602AC97BC700034697 /* Storyboarded.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D02FEF512AC7761200034697 /* SpecCoordinator.swift */,
+				D02FEF622AC97DC600034697 /* SpecCoordinatedVC.swift */,
 			);
 			path = BaseClasses;
 			sourceTree = "<group>";
@@ -195,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				D02FEF5A2AC77A5200034697 /* SpecEventInteractorProtocol.swift */,
-				D02FEF5C2AC77BD900034697 /* SpecEvent.swift */,
+				D02FEF5C2AC77BD900034697 /* SpecEvents.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -271,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02651CE2AC757340017CFC2 /* MainScreenVC.swift in Sources */,
+				D02FEF652AC9830E00034697 /* MainScreenVC.swift in Sources */,
+				D02651CE2AC757340017CFC2 /* OLDMainScreenVC.swift in Sources */,
 				D02651D42AC75EFA0017CFC2 /* SpecPathProtocol.swift in Sources */,
+				D02FEF632AC97DC700034697 /* SpecCoordinatedVC.swift in Sources */,
 				D02FEF582AC7783600034697 /* MasterCoordinator.swift in Sources */,
 				D02651D72AC75F4E0017CFC2 /* Collection+Extensions.swift in Sources */,
 				D02FEF5B2AC77A5200034697 /* SpecEventInteractorProtocol.swift in Sources */,
@@ -282,12 +293,13 @@
 				D02651B02AC751A60017CFC2 /* AppDelegate.swift in Sources */,
 				D02651E22AC762D20017CFC2 /* TestPath.swift in Sources */,
 				D02651C52AC753BB0017CFC2 /* SpecCoordinatorProtocol.swift in Sources */,
-				D02FEF5D2AC77BD900034697 /* SpecEvent.swift in Sources */,
+				D02FEF5D2AC77BD900034697 /* SpecEvents.swift in Sources */,
 				D02FEF542AC7765900034697 /* SpecCoordinatedProtocol.swift in Sources */,
 				D02651C72AC754780017CFC2 /* OLDMasterCoordinator.swift in Sources */,
-				D02FEF5F2AC783AE00034697 /* WebViewCoordinator.swift in Sources */,
+				D02FEF5F2AC783AE00034697 /* MainScreenCoordinator.swift in Sources */,
 				D02651DD2AC761180017CFC2 /* SpecStep.swift in Sources */,
 				D02651B22AC751A60017CFC2 /* SceneDelegate.swift in Sources */,
+				D02FEF612AC97BC700034697 /* Storyboarded.swift in Sources */,
 				D02651DF2AC761700017CFC2 /* ActionableProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

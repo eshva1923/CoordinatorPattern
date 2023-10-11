@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import WebKit
 
-class WebViewCoordinator: SpecCoordinator {
-    private var webviewVC: MainScreenVC!
+class MainScreenCoordinator: SpecCoordinator {
+    //private var webviewVC: MainScreenVC!
     init() {
         super.init(paths: [],
                    name: "WEBVIEW COORDINATOR",
@@ -19,18 +19,10 @@ class WebViewCoordinator: SpecCoordinator {
         //send message to master when ready
     }
     override func start() {
-        guard let webVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainScreenVC") as? MainScreenVC else { fatalError("OH NO") }
-        webviewVC = webVC
-        //let vc: MainScreenVC & SpecCoordinatedProtocol = mainVC
-        webviewVC.coordinator = self
-        coordinated.append(webviewVC)
-        guard let myMaster = master else { return }
-        sendEvent(SpecEvents.coordinator.add_VC, to: myMaster, payload: webviewVC)
-        //navigationController?.setViewControllers([vc], animated: false)
+        addCoordinatedViewController(withName: "MainScreenVC")
         
         //setupPaths()
     }
-    
     override func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
         if event == SpecEvents.webview.ready {
             sendEvent(SpecEvents.webview.command_loadURL, to: from as! SpecEventReceiverProtocol, payload: "https://web.eshva.net")
@@ -38,3 +30,13 @@ class WebViewCoordinator: SpecCoordinator {
     }
 }
 
+
+extension MainScreenCoordinator {
+    private func addCoordinatedViewController(withName name: String) {
+        guard let myMaster = master else { return }
+        guard let vcToAdd = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name) as? MainScreenVC else { fatalError("OH NO") }
+        vcToAdd.coordinator = self
+        coordinated.append(vcToAdd)
+        sendEvent(SpecEvents.coordinator.add_VC, to: myMaster, payload: vcToAdd)
+    }
+}

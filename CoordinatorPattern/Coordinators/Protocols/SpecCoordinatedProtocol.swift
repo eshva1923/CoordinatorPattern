@@ -6,8 +6,9 @@
 //
 
 import Foundation
-protocol SpecCoordinatedProtocol {
-    var coordinator: SpecCoordinatorProtocol? {get set}
-    var name: String {get set}
+protocol SpecCoordinatedProtocol: AnyObject {
+    var coordinator: SpecCoordinator? {get set}
+    //var name: String {get set}
     func notifyCoordinator(_ event: SpecEvent, payload: Any?)
+    func didFinish()
 }

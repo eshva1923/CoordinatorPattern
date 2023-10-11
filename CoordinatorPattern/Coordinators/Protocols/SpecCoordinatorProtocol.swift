@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol SpecCoordinatorProtocol {
+protocol SpecCoordinatorProtocol: AnyObject {
     var paths: [SpecPath] {get set}
     var name: String {get set}
     //var navigationController: UINavigationController? {get set}
@@ -19,6 +19,8 @@ protocol SpecCoordinatorProtocol {
     //func eventSend(_ event: SpecEvent, to: SpecCoordinatedProtocol)
     //func eventBroadcast(_ event: SpecEvent)
     func start()
+    func done()
+    func coordinatedDidFinish(_ coordinatedVC: SpecCoordinatedProtocol)
     func setMaster(_ newMaster: SpecCoordinator)
     //
     func startPath(_ path: SpecPath)

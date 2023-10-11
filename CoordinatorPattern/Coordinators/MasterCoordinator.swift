@@ -22,7 +22,7 @@ class MasterCoordinator: SpecCoordinator {
         configure()
     }
     private func configure() {
-        addSlave(WebViewCoordinator())
+        addSlave(MainScreenCoordinator())
     }
     override func start() {
         print("master started")
@@ -34,10 +34,26 @@ class MasterCoordinator: SpecCoordinator {
     override func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
         if event == SpecEvents.coordinator.add_VC {
             guard let vc = payload as? UIViewController else {return}
-            var newNavControllerStack = MasterCoordinator.navigationController.viewControllers
-            newNavControllerStack.append(vc)
-            MasterCoordinator.navigationController.setViewControllers(newNavControllerStack, animated: false)
+            addVC(vc)
+        }
+        if event == SpecEvents.coordinator.remove_VC {
+            guard let vc = payload as? UIViewController else {return}
+            removeVC(vc)
         }
     }
 }
 
+extension MasterCoordinator {
+    private func addVC(_ vc: UIViewController) {
+        var newNavControllerStack = MasterCoordinator.navigationController.viewControllers
+        newNavControllerStack.append(vc)
+        MasterCoordinator.navigationController.setViewControllers(newNavControllerStack, animated: false)
+    }
+    private func removeVC(_ vc: UIViewController) {
+        var newNavControllerStack = MasterCoordinator.navigationController.viewControllers
+        for (index, thisVC) in newNavControllerStack.enumerated() {
+            if thisVC === vc { newNavControllerStack.remove(at: index) }
+        }
+        MasterCoordinator.navigationController.setViewControllers(newNavControllerStack, animated: false)
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  SpecEvent.swift
+//  SpecEvents.swift
 //  CoordinatorPattern
 //
 //  Created by Federico Brandani on 29/09/2023.
@@ -18,5 +18,10 @@ struct SpecEvents {
         static let ready = "coordinator_ready"
         static let added = "coordinator_added"
         static let add_VC = "coordinator_add_VC"
+        static let remove_VC = "coordinator_remove_VC"
+        static let finished = "coordinator_finished"
+    }
+    struct coordinatedVC {
+        static let finished = "coordinatedVC_didFinish"
     }
 }

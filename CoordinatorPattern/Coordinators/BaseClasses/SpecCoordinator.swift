@@ -12,7 +12,7 @@ class SpecCoordinator: SpecCoordinatorProtocol, SpecEventInitiatorProtocol, Spec
     var paths: [SpecPath]
     var name: String
     var coordinated: [SpecCoordinatedProtocol]
-    var master: SpecCoordinator?
+    weak var master: SpecCoordinator?
     var slaves: [SpecCoordinator]
     
     init(paths: [SpecPath], name: String, coordinated: [SpecCoordinatedProtocol], master: SpecCoordinator? = nil, slaves: [SpecCoordinator]) {
@@ -34,37 +34,31 @@ class SpecCoordinator: SpecCoordinatorProtocol, SpecEventInitiatorProtocol, Spec
     func start() {
         fatalError("ERROR: implement \(#function)")
     }
+    func done() {
+        guard let myMaster = master else {return}
+        sendEvent(SpecEvents.coordinator.finished, to: myMaster, payload: self)
+    }
     
     func startPath(_ path: SpecPath) {
         fatalError("ERROR: implement \(#function)")
     }
 
+    func coordinatedDidFinish(_ coordinatedVC: SpecCoordinatedProtocol) {
+        for (index, thisVC) in coordinated.enumerated() {
+            if thisVC === coordinatedVC {
+                coordinated.remove(at: index)
+            }
+        }
+    }
 
 
     func sendEvent(_ event: SpecEvent, to: SpecEventReceiverProtocol, payload: Any?) {
         to.receiveEvent(event, from: self, payload: payload)
-        //fatalError("ERROR: implement \(#function)")
     }
     
     func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
         print ("event received: \(event)")
-        //fatalError("ERROR: implement \(#function)")
+        fatalError("ERROR: implement \(#function)")
     }
     
 }
-
-    /*
-    func eventReceived(_ event: SpecEvent) {
-        fatalError("ERROR: implement \(#function)")
-    }
-    func eventSend(_ event: SpecEvent, to: SpecCoordinatedProtocol) {
-        fatalError("ERROR: implement \(#function)")
-    }
-    
-    func eventBroadcast(_ event: SpecEvent) {
-        fatalError("ERROR: implement \(#function)")
-    }
-    
-    
-}
-*/

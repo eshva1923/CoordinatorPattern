@@ -2,38 +2,29 @@
 //  MainScreenVC.swift
 //  CoordinatorPattern
 //
-//  Created by Federico Brandani on 29/09/2023.
+//  Created by Federico Brandani on 01/10/2023.
 //
 
+import Foundation
 import UIKit
 import WebKit
 
-class MainScreenVC: UIViewController, SpecCoordinatedProtocol {
-    var name = "MainScreenVC"
+class MainScreenVC: SpecCoordinatedVC {
     @IBOutlet weak var webview: WKWebView!
-    
-    var coordinator: SpecCoordinatorProtocol?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        notifyCoordinator(SpecEvents.webview.ready)
+        notifyCoordinator(SpecEvents.webview.ready, payload: self)
     }
-}
-
-extension MainScreenVC: SpecEventReceiverProtocol, SpecEventInitiatorProtocol {
-    func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
-        if event == SpecEvents.webview.command_loadURL, let desiredURL = payload as? String {
-            loadURL(desiredURL)
+    
+    override func receiveEvent(_ event: SpecEvent, from: SpecEventInitiatorProtocol, payload: Any?) {
+        if event == SpecEvents.webview.command_loadURL {
+            if let urlString = payload as? String {
+                loadURL(urlString)
+            } else if let url = payload as? URL {
+                loadURL(url)
+            }
+            else { return }
         }
-    }
-    
-    func notifyCoordinator(_ event: SpecEvent, payload: Any? = nil) {
-        guard let myCoordinator = coordinator as? SpecCoordinator else {return}
-        sendEvent(event, to: myCoordinator, payload: payload)
-    }
-    
-    func sendEvent(_ event: SpecEvent, to: SpecEventReceiverProtocol, payload: Any?) {
-        to.receiveEvent(event, from: self, payload: payload)
     }
 }
 
@@ -48,8 +39,4 @@ extension MainScreenVC {
     private func loadRequest(_ urlReq: URLRequest) {
         webview.load(urlReq)
     }
-}
-
-extension MainScreenVC: WKNavigationDelegate {
-    
 }
